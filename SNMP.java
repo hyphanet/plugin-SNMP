@@ -32,21 +32,27 @@ public class SNMP implements FredPlugin{
 		SNMPAgent.stopSNMPAgent();
 		
 		try{
-		Config c=pr.getNode().config;
-		SubConfig sc=new SubConfig("plugins.snmp",c);
-		sc.register("port", 4000,2, true, "SNMP port number", "SNMP port number", new SNMPPortNumberCallback());
-		sc.register("bindto", "127.0.0.1", 2, true, "Ip address to bind to", "Ip address to bind the SNMP server to", new SNMPBindtoCallback());
-		
-		bindto=sc.getString("bindto");
-		port=sc.getInt("port");
-		
-		SNMPAgent.setSNMPPort(port);
-        System.out.println("Starting SNMP server on "+bindto+":"+port);
-        SNMPStarter.initialize();
-		Logger.normal(this,"Starting SNMP server on "+bindto+":"+port);
-		
-		sc.finishedInitialization();
-		while(goon){};
+			Config c=pr.getNode().config;
+			SubConfig sc=new SubConfig("plugins.snmp",c);
+			sc.register("port", 4000,2, true, "SNMP port number", "SNMP port number", new SNMPPortNumberCallback());
+			sc.register("bindto", "127.0.0.1", 2, true, "Ip address to bind to", "Ip address to bind the SNMP server to", new SNMPBindtoCallback());
+			
+			bindto=sc.getString("bindto");
+			port=sc.getInt("port");
+			
+			SNMPAgent.setSNMPPort(port);
+			System.out.println("Starting SNMP server on "+bindto+":"+port);
+			SNMPStarter.initialize();
+			Logger.normal(this,"Starting SNMP server on "+bindto+":"+port);
+			
+			sc.finishedInitialization();
+			while(goon){
+				try {
+					Thread.sleep(1000);  // TODO/**FIXME** perhaps this needs to be shorter for some reason?
+				} catch (InterruptedException e) {
+					// Ignore
+				}
+			};
 		}catch (IllegalArgumentException e){
 			Logger.error(this, "Error loading SNMP server");
 		}
