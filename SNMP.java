@@ -48,7 +48,7 @@ public class SNMP implements FredPlugin{
 			sc.finishedInitialization();
 			while(goon){
 				try {
-					Thread.sleep(1000);  // TODO/**FIXME** perhaps this needs to be shorter for some reason?
+					Thread.sleep(10000);
 				} catch (InterruptedException e) {
 					// Ignore
 				}
