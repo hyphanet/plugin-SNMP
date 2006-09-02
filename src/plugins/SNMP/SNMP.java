@@ -35,8 +35,8 @@ public class SNMP implements FredPlugin{
 		try{
 			Config c=pr.getNode().config;
 			SubConfig sc=new SubConfig("plugins.snmp",c);
-			sc.register("port", 4000,2, true, "SNMP port number", "SNMP port number", new SNMPPortNumberCallback());
-			sc.register("bindto", "127.0.0.1", 2, true, "Ip address to bind to", "Ip address to bind the SNMP server to", new SNMPBindtoCallback());
+			sc.register("port", 4000,2, true, false, "SNMP port number", "SNMP port number", new SNMPPortNumberCallback());
+			sc.register("bindto", "127.0.0.1", 2, true, false, "Ip address to bind to", "Ip address to bind the SNMP server to", new SNMPBindtoCallback());
 			
 			bindto=sc.getString("bindto");
 			port=sc.getInt("port");
