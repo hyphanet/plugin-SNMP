@@ -1,4 +1,4 @@
-package plugins.snmplib;
+package plugins.SNMP.snmplib;
 
 public class SNMPGauge32 extends SNMPTypeWrapperNum {
 	public SNMPGauge32() { super(); }

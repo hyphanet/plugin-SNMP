@@ -1,4 +1,4 @@
-package plugins.snmplib;
+package plugins.SNMP.snmplib;
 
 import freenet.config.Config;
 import freenet.io.comm.IOStatisticCollector;

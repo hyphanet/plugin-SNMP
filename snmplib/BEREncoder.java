@@ -1,4 +1,4 @@
-package plugins.snmplib;
+package plugins.SNMP.snmplib;
 
 import java.util.Stack;
 import java.util.Vector;

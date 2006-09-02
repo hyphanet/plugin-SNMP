@@ -1,4 +1,4 @@
-package plugins.snmplib;
+package plugins.SNMP.snmplib;
 
 public class SNMPCounter32 extends SNMPTypeWrapperNum {
 	public SNMPCounter32() { super(); }
