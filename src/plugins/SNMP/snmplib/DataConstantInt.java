@@ -1,4 +1,4 @@
-package plugins.snmplib;
+package plugins.SNMP.snmplib;
 
 
 public class DataConstantInt implements DataFetcher {

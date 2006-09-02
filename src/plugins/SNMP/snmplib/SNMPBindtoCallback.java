@@ -1,4 +1,4 @@
-package plugins.snmplib;
+package plugins.SNMP.snmplib;
 
 import freenet.config.InvalidConfigValueException;
 import freenet.config.StringCallback;

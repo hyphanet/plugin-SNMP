@@ -1,4 +1,4 @@
-package plugins.snmplib;
+package plugins.SNMP.snmplib;
 
 public abstract class SNMPTypeWrapperNum {
 	protected long value;

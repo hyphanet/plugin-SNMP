@@ -1,10 +1,11 @@
-package plugins;
+package plugins.SNMP;
 
+import plugins.SNMP.snmplib.*;
 import freenet.config.Config;
 import freenet.config.SubConfig;
-import freenet.pluginmanager.*;
+import freenet.pluginmanager.FredPlugin;
+import freenet.pluginmanager.PluginRespirator;
 import freenet.support.Logger;
-import plugins.snmplib.*;
 
 
 public class SNMP implements FredPlugin{

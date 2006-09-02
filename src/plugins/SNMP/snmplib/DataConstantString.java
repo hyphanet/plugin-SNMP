@@ -1,4 +1,4 @@
-package plugins.snmplib;
+package plugins.SNMP.snmplib;
 
 public class DataConstantString implements DataFetcher {
 	private String OID;
