@@ -33,6 +33,8 @@ public class SNMP implements FredPlugin{
 		SNMPAgent.stopSNMPAgent();
 		
 		try{
+			//FIXME: sort out
+			/*
 			Config c=pr.getNode().config;
 			SubConfig sc=new SubConfig("plugins.snmp",c);
 			sc.register("port", 4000,2, true, false, "SNMP port number", "SNMP port number", new SNMPPortNumberCallback());
@@ -41,12 +43,16 @@ public class SNMP implements FredPlugin{
 			bindto=sc.getString("bindto");
 			port=sc.getInt("port");
 			
+			sc.finishedInitialization();
+			*/
+			
+			port=4000;
+			bindto="127.0.0.1";
+			
 			SNMPAgent.setSNMPPort(port);
 			System.out.println("Starting SNMP server on "+bindto+":"+port);
 			SNMPStarter.initialize();
 			Logger.normal(this,"Starting SNMP server on "+bindto+":"+port);
-			
-			sc.finishedInitialization();
 			while(goon){
 				try {
 					Thread.sleep(10000);
