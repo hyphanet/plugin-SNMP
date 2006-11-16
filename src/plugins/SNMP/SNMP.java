@@ -50,9 +50,9 @@ public class SNMP implements FredPlugin{
 			bindto="127.0.0.1";
 			
 			SNMPAgent.setSNMPPort(port);
-			System.out.println("Starting SNMP server on "+bindto+":"+port);
+			System.out.println("Starting SNMP server on "+bindto+ ':' +port);
 			SNMPStarter.initialize();
-			Logger.normal(this,"Starting SNMP server on "+bindto+":"+port);
+			Logger.normal(this,"Starting SNMP server on "+bindto+ ':' +port);
 			while(goon){
 				try {
 					Thread.sleep(10000);

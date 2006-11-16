@@ -20,7 +20,7 @@ public class BERDecoder {
 		if (buf[ptr] != id)
 			throw new BadFormatException("Unknown Sequence (expected: 0x" +
 					Integer.toHexString(id) + ", got: 0x" +
-					Integer.toHexString(buf[ptr]) + ")");
+					Integer.toHexString(buf[ptr]) + ')');
 		ptr++;
 		int len = readBERInt();
 		seqStack.push(new Integer(ptr + len));
@@ -32,7 +32,7 @@ public class BERDecoder {
 		int pos = ((Integer)seqStack.pop()).intValue();
 		if (pos != ptr)
 			throw new BadFormatException("Wrong length of field " + 
-					length + ":" + pos + ":" + ptr);
+					length + ':' + pos + ':' + ptr);
 	}
 	
 	public boolean sequenceHasMore() {

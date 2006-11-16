@@ -191,7 +191,7 @@ public class SNMPAgent implements Runnable {
             	for (int i = 0 ; i < packet.getLength() ; i++) {
             		String num = "000" + Integer.toHexString(buf[i]);
             		num = num.substring(num.length()-2);
-            		System.err.print("0x" + num + " ");
+            		System.err.print("0x" + num + ' ');
             		if ((i+1)%8 == 0)
             			System.err.print("  ");
             		if ((i+1)%16 == 0)

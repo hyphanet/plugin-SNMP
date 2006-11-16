@@ -8,7 +8,7 @@ public class DataStatisticsInfo implements DataFetcher {
 	boolean in;
 	
 	public DataStatisticsInfo(int blocks, boolean in) {
-		this.OID = "1.1." + blocks + "." + (in?"1":"0");
+		this.OID = "1.1." + blocks + '.' + (in?"1":"0");
 		//System.err.println("adding: " + this.OID);
 		this.in = in;
 		this.blocks = blocks;

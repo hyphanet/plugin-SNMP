@@ -44,7 +44,7 @@ public class InfoSystem implements MultiplexedDataFetcher {
 
 		
 		if (oid.equals(".1.3.6.1.2.1.1.5.0")) //SNMPv2-MIB::sysName.0
-			return (Version.nodeName + " " + Version.nodeVersion + " (" + Version.buildNumber() + ")");
+			return (Version.nodeName + ' ' + Version.nodeVersion + " (" + Version.buildNumber() + ')');
 
 		
 		if (oid.equals(".1.3.6.1.4.1.2021.4.5")) //UCD-SNMP-MIB::memTotalReal.0
