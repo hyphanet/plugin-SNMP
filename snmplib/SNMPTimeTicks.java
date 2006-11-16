@@ -19,6 +19,6 @@ public class SNMPTimeTicks extends SNMPTypeWrapperNum {
 		long hour = rest%24;
 		rest = rest/24;
 		long day = rest;
-		return day + ":" + hour + ":" + min + ":" + sec + "." + dec;
+		return day + ":" + hour + ':' + min + ':' + sec + '.' + dec;
 	}
 }
