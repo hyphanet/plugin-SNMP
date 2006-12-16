@@ -1,7 +1,7 @@
 package plugins.SNMP.snmplib;
 
-import freenet.config.IntCallback;
 import freenet.config.InvalidConfigValueException;
+import freenet.support.api.IntCallback;
 
 public class SNMPPortNumberCallback implements IntCallback {
 	
