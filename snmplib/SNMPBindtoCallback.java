@@ -15,7 +15,7 @@ public class SNMPBindtoCallback implements StringCallback {
 	}
 
 	public void set(String val) throws InvalidConfigValueException {
-		if(val != get()) {
+		if(!val.equals(get())) {
 			SNMPAgent.setSNMPbindto(val);
 		}
 	}
