@@ -293,7 +293,6 @@ public class SNMPAgent implements Runnable {
     	return replyStart(rc, 0, 0);
     }
     private BEREncoder replyStart(RequestContainer rc, int errStatus, int errIndex) /* throws SnmpTooBigException */ {
-    	int replyLength = 0;
     	BEREncoder be = new BEREncoder();
     	be.startSequence(); // whole pkg
     	be.putInteger(0); // version
