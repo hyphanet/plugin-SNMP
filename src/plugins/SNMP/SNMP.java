@@ -49,7 +49,7 @@ public class SNMP implements FredPlugin{
 			
 			SNMPAgent.setSNMPPort(port);
 			System.out.println("Starting SNMP server on "+bindto+ ':' +port);
-			SNMPStarter.initialize();
+			SNMPStarter.initialize(pr.getNode());
 			Logger.normal(this,"Starting SNMP server on "+bindto+ ':' +port);
 			while(goon){
 				try {
