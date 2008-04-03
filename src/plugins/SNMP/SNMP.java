@@ -7,7 +7,7 @@ import freenet.support.Logger;
 
 
 public class SNMP implements FredPlugin{
-	boolean goon=true;
+	private volatile boolean goon=true;
 	PluginRespirator pr;
 	private int port;
 	private String bindto;
