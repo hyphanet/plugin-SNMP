@@ -3,7 +3,7 @@ package plugins.SNMP.snmplib;
 import freenet.config.InvalidConfigValueException;
 import freenet.support.api.StringCallback;
 
-public class SNMPBindtoCallback implements StringCallback {
+public class SNMPBindtoCallback extends StringCallback {
 	
 	public SNMPBindtoCallback() {
 	}

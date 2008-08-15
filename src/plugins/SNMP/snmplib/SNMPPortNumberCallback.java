@@ -3,16 +3,16 @@ package plugins.SNMP.snmplib;
 import freenet.config.InvalidConfigValueException;
 import freenet.support.api.IntCallback;
 
-public class SNMPPortNumberCallback implements IntCallback {
+public class SNMPPortNumberCallback extends IntCallback {
 	
 	public SNMPPortNumberCallback() {
 	}
 	
-	public int get() {
+	public Integer get() {
 		return SNMPAgent.getSNMPAgent().getSNMPort();
 	}
 
-	public void set(int val) throws InvalidConfigValueException {
+	public void set(Integer val) throws InvalidConfigValueException {
 		if(val != get()) {
 			SNMPAgent.setSNMPPort(val);
 		}
