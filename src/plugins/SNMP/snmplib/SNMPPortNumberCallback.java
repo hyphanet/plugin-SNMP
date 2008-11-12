@@ -13,7 +13,7 @@ public class SNMPPortNumberCallback extends IntCallback {
 	}
 
 	public void set(Integer val) throws InvalidConfigValueException {
-		if (val.equals(get())) {
+		if (!val.equals(get())) {
 			SNMPAgent.setSNMPPort(val);
 		}
 	}
